@@ -4,9 +4,10 @@
 #include <ArduinoJson.h> 
 #define DHTPIN 4 // Номер пина, который подключен к DHT22 
 #define DHTTYPE DHT22 // Указываем, какой тип датчика мы используем 
+
 byte mqtt_server[] = { 192, 168, 88, 254 }; // ip адресс 
-mqtt сервера char buffer[10]; DHT dht(DHTPIN, DHTTYPE); // WiFi const char* 
-WIFI_SSID = "your_SSID"; // Укажите ваш 
+mqtt сервера char buffer[10]; DHT dht(DHTPIN, DHTTYPE); // WiFi const 
+char* WIFI_SSID = "your_SSID"; // Укажите ваш 
 SSID const char* WIFI_PASS = "your_PASSWORD"; // Укажите ваш wifi пароль // Читаем MQTT сообщения 
 void callback(char* topic, byte* payload, unsigned int length) { } WiFiClient wifiClient; 
 PubSubClient client(mqtt_server, 1883, callback, wifiClient); 
