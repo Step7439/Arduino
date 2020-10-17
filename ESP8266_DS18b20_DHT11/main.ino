@@ -27,8 +27,8 @@ OneWire  ds(5); //DS18B20 on GPIO2
 
 DHT dht(DHTPIN, DHTTYPE);
 
-#define wifi_ssid "House"
-#define wifi_password "123"
+#define wifi_ssid "ABCDE"
+#define wifi_password "ABCDE"
 
 #define mqtt_server "192.168.10.13"
 //#define mqtt_user "user"
