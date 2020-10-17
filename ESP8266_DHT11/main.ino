@@ -31,8 +31,8 @@ DHT dht2(5, DHT11);
 //DHT dht(DHTPIN, DHTTYPE);
 //DHT dht1(DHTPIN, DHTTYPE);
 
-#define wifi_ssid "House"
-#define wifi_password "347620step"
+#define wifi_ssid "AABCDE"
+#define wifi_password "ABCDE"
 
 #define mqtt_server "192.168.10.13"
 //#define mqtt_user "user"
