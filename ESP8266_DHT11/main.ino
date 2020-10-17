@@ -28,7 +28,7 @@ DHT dht2(5, DHT11);
 // as the current DHT reading algorithm adjusts itself to work on faster procs.
 
 
-//DHT dht(DHTPIN, DHTTYPE); step ddddd
+//DHT dht(DHTPIN, DHTTYPE);
 //DHT dht1(DHTPIN, DHTTYPE);
 
 #define wifi_ssid "AABCDE"
