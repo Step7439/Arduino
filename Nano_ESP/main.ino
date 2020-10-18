@@ -4,7 +4,7 @@
 #include <OneWire.h>
 
 #define mqtt_server "192.168.10.13"
-SoftwareSerial ESPport(1, 0);   // RX, TX
+SoftwareSerial ESPport(1, 0);   // RX, TXxxxxx
 
 int sensePin0 = 0;
 int sensePin1 = 1;
