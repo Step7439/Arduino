@@ -1,12 +1,10 @@
-#include <ESP8266WiFi.h>
+#include <SoftwareSerial.h>
 #include <Wire.h>
 #include <PubSubClient.h>
 #include <OneWire.h>
 
-#define wifi_ssid "AABCDE"
-#define wifi_password "ABCDE"
-
 #define mqtt_server "192.168.10.13"
+SoftwareSerial ESPport(1, 0);   // RX, TX
 
 int sensePin0 = 0;
 int sensePin1 = 1;
