@@ -6,6 +6,39 @@
 #define mqtt_server "192.168.10.13"
 SoftwareSerial ESPport(1, 0);   // RX, TX
 
+
+void callback(char* topic, byte* payload, unsigned int length) {
+ 
+  char json[length + 1];
+  strncpy (json, (char*)payload, length);
+  json[length] = '\0';
+
+  String message = String(json);
+
+  if (strcmp(topic, "test/led/red") != 0){ // Если пришло сообщение для красного
+    if(message == "0"){ // Если надо выключить
+      digitalWrite(red_led, LOW); // выключаем
+    }else{
+      digitalWrite(red_led, HIGH); // включаем
+    }
+  }
+  
+  // Тоже самое, что и для красного
+  if (strcmp(topic, "test/led/green") != 0){
+    if(message == "0"){
+      digitalWrite(green_led, LOW);
+    }else{
+      digitalWrite(green_led, HIGH);
+    }
+  }
+}  
+
+
+WiFiClient wifiClient;
+PubSubClient client(mqtt_server, 1883, callback, wifiClient);
+
+
+
 int sensePin0 = 0;
 int sensePin1 = 1;
 int sensePin2 = 2;
