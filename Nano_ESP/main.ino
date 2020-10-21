@@ -3,7 +3,7 @@
 #include <PubSubClient.h>
 #include <OneWire.h>
 
-#define mqtt_server "192.168.10.13"
+
 SoftwareSerial ESPport(1, 0);   // RX, TX
 
 int sensePin0 = 0;
@@ -16,8 +16,9 @@ int LedPin3 = 3;
 int LedPin4 = 4;
 int LedPin5 = 5;
 
-void setup(){
+void setup(){ 
     
+    Serial.begin(9600);
     pinMode(2, OUTPUT); 
     pinMode(3, OUTPUT); 
     pinMode(4, OUTPUT); 
@@ -30,27 +31,28 @@ void loop(){
     int val3 = analogRead(sensePin2);
     int val4 = analogRead(sensePin3);
 
-    if(val1 > 800) 
+    if(val1 > 0) 
         digitalWrite(LedPin2, HIGH);
     else 
         digitalWrite(LedPin2, LOW);
 
-    if(val2 > 800) 
+    if(val2 > 0) 
         digitalWrite(LedPin3, HIGH);
     else 
         digitalWrite(LedPin3, LOW);
 
-    if(val3 > 800) 
+    if(val3 > 0) 
         digitalWrite(LedPin4, HIGH);
     else 
         digitalWrite(LedPin4, LOW);
 
-    if(val4 > 800) 
+    if(val4 > 0) 
         digitalWrite(LedPin5, HIGH);
     else 
         digitalWrite(LedPin5, LOW);
 
     delay(5000);
     
-    
-}
+}  
+
+  
