@@ -4,7 +4,9 @@
   Once it connects successfully to a Wifi network and a MQTT broker, it subscribe to a topic and send a message to it.
   It will also send a message delayed 5 seconds later.
 */
-
+#include <Wire.h>
+#include <PubSubClient.h>
+#include <OneWire.h>
 #include "EspMQTTClient.h"
 
 EspMQTTClient client(

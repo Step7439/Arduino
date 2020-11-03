@@ -4,11 +4,18 @@
             "name": "Linux",
             "includePath": [
                 "/snap/arduino/41/tools/**",
-                "/snap/arduino/41/hardware/arduino/avr/**"
+                "/snap/arduino/41/hardware/arduino/avr/**",
+                "/snap/arduino/current/hardware/arduino/avr/**",
+                "/snap/arduino/current/tools/**"
             ],
             "forcedInclude": [
                 "/snap/arduino/41/hardware/arduino/avr/cores/arduino/Arduino.h"
-            ]
+            ],
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/cpp",
+            "cStandard": "gnu17",
+            "cppStandard": "c++17"
         }
-    ]
+    ],
+    "version": 4
 }

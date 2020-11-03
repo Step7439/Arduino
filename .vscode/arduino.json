@@ -1,4 +1,5 @@
 {
-    "board": "arduino:avr:esplora",
-    "port": "com5"
+    "board": "arduino:avr:unowifi",
+    "port": "com5",
+    "programmer": "AVRISP mkII"
 }

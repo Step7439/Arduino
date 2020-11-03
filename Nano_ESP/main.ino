@@ -1,7 +1,4 @@
 #include <SoftwareSerial.h>
-#include <Wire.h>
-#include <PubSubClient.h>
-#include <OneWire.h>
 
 
 SoftwareSerial ESPport(1, 0);   // RX, TX
