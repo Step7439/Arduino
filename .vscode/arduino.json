@@ -1,5 +1,5 @@
 {
-    "programmer": "AVRISP mkII",
-    "board": "arduino:avr:uno",
-    "sketch": "Enternet_DHT11/main.ino"
+    "board": "arduino:avr:nano",
+    "configuration": "cpu=atmega328",
+    "sketch": "esp8266/esp8266.ino"
 }
