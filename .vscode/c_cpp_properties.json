@@ -3,11 +3,14 @@
         {
             "name": "Linux",
             "includePath": [
-                "/home/home/arduino-1.8.7/tools/**",
-                "/home/home/arduino-1.8.7/hardware/arduino/avr/**"
+                "/home/home/.arduino15/packages/esp8266/tools/**",
+                "/home/home/.arduino15/packages/esp8266/hardware/esp8266/2.7.4/**",
+                "/home/home/Arduino15/tools/**",
+                "/home/home/Arduino15/hardware/arduino/avr/**"
+                
             ],
             "forcedInclude": [
-                "/home/home/arduino-1.8.7/hardware/arduino/avr/cores/arduino/Arduino.h"
+                "/home/home/Arduino15/libraries/"
             ],
             "intelliSenseMode": "gcc-x64",
             "compilerPath": "/usr/bin/gcc",
