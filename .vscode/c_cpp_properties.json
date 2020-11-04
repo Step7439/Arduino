@@ -3,16 +3,14 @@
         {
             "name": "Linux",
             "includePath": [
-                "/snap/arduino/41/tools/**",
-                "/snap/arduino/41/hardware/arduino/avr/**",
-                "/snap/arduino/current/hardware/arduino/avr/**",
-                "/snap/arduino/current/tools/**"
+                "/home/home/arduino-1.8.7/tools/**",
+                "/home/home/arduino-1.8.7/hardware/arduino/avr/**"
             ],
             "forcedInclude": [
-                "/snap/arduino/41/hardware/arduino/avr/cores/arduino/Arduino.h"
+                "/home/home/arduino-1.8.7/hardware/arduino/avr/cores/arduino/Arduino.h"
             ],
             "intelliSenseMode": "gcc-x64",
-            "compilerPath": "/usr/bin/cpp",
+            "compilerPath": "/usr/bin/gcc",
             "cStandard": "gnu17",
             "cppStandard": "c++17"
         }

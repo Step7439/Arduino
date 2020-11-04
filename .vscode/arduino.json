@@ -1,5 +1,5 @@
 {
-    "board": "arduino:avr:unowifi",
-    "port": "com5",
-    "programmer": "AVRISP mkII"
+    "programmer": "AVRISP mkII",
+    "board": "arduino:avr:uno",
+    "sketch": "Enternet_DHT11/main.ino"
 }
