@@ -10,7 +10,7 @@
                 
             ],
             "forcedInclude": [
-                "/home/home/Arduino15/libraries/"
+                
             ],
             "intelliSenseMode": "gcc-x64",
             "compilerPath": "/usr/bin/gcc",

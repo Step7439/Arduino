@@ -12,7 +12,7 @@
 EspMQTTClient client(
   "WifiSSID",
   "WifiPassword",
-  "192.168.1.100",  // MQTT Broker server ip
+  "192.168.10.13",  // MQTT Broker server ip
   "MQTTUsername",   // Can be omitted if not needed
   "MQTTPassword",   // Can be omitted if not needed
   "TestClient",     // Client name that uniquely identify your device
@@ -33,23 +33,32 @@ void setup()
 // WARNING : YOU MUST IMPLEMENT IT IF YOU USE EspMQTTClient
 void onConnectionEstablished()
 {
-  // Subscribe to "mytopic/test" and display received message to Serial
+  /*/ Subscribe to "mytopic/test" and display received message to Serial
   client.subscribe("mytopic/test", [](const String & payload) {
     Serial.println(payload);
+  }); */
+
+  // Subscribe to "mytopic/wildcardtest/#" and display received message to Serial
+  client.subscribe("mytopic/25/#", [](const String & topic, const String & payload) {
+    Serial.println(topic + "LedPin2 " + payload);
   });
 
   // Subscribe to "mytopic/wildcardtest/#" and display received message to Serial
-  client.subscribe("mytopic/wildcardtest/#", [](const String & topic, const String & payload) {
-    Serial.println(topic + ": " + payload);
+  client.subscribe("mytopic/50/#", [](const String & topic, const String & payload) {
+    Serial.println(topic + "LedPin3 " + payload);
   });
 
-  // Publish a message to "mytopic/test"
-  client.publish("mytopic/test", "This is a message"); // You can activate the retain flag by setting the third parameter to true
-
-  // Execute delayed instructions
-  client.executeDelayed(5 * 1000, []() {
-    client.publish("mytopic/test", "This is a message sent 5 seconds later");
+  // Subscribe to "mytopic/wildcardtest/#" and display received message to Serial
+  client.subscribe("mytopic/75/#", [](const String & topic, const String & payload) {
+    Serial.println(topic + "LedPin4 " + payload);
   });
+
+  // Subscribe to "mytopic/wildcardtest/#" and display received message to Serial
+  client.subscribe("mytopic/100/#", [](const String & topic, const String & payload) {
+    Serial.println(topic + "LedPin5 " + payload);
+  });
+
+  
 }
 
 void loop()
